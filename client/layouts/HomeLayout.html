@@ -1,50 +1,15 @@
 <template name="HomeLayout">
+	
 	{{> Header}}
-	<main>
-		<div class="jumbotron">
-  			<div class="container-fluid jumbotron-text text-center">	
-    			<h1>POLL ALL THE THINGS</h1>
-    			<hr class="primary">
-  				<p>If you can think about it you can poll it!</p>
-  				<p><a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a></p>
-		  	</div>
-		</div>
+	
+	<main class="wrapper">
 		
-		<section id="features">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h2 class="section-heading">What makes PATT different?</h2>
-						<hr class="primary">
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 text-center">
-						<i class="fa fa-cog fa-5x icon-intro"></i>
-						<h3>Create</h3>
-						<p class="soft-text"></p>
-					</div>
-					<div class="col-lg-3 col-md-6 text-center">
-						<i class="fa fa-share-alt-square fa-5x icon-intro"></i>
-						<h3>Share</h3>
-						<p class="soft-text"></p>
-					</div>
-
-					<div class="col-lg-3 col-md-6 text-center">
-						<i class="fa fa-thumbs-up fa-5x icon-intro"></i>
-						<h3>Vote</h3>
-						<p class="soft-text"></p>
-					</div>
-					<div class="col-lg-3 col-md-6 text-center">
-						<i class="fa fa-comments fa-5x icon-intro"></i>
-						<h3>Learn</h3>
-						<p class="soft-text"></p>
-					</div>
-				</div>
-			</div>
-		</section>
+		{{> Jumbotron}}
+		
+		{{> Features}}
 
 	</main>
+
+	{{> Footer}}
+
 </template>
