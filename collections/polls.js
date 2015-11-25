@@ -14,12 +14,16 @@ PollOptions = new SimpleSchema ({
 		type: String,
 		label: "Option"
 	},
+
 	votes: {
-		type: Number,
-		min: 0,
-		autoform: {
-			type: "hidden"
-		}
+	    type: Number,
+	    min: 0,
+	    autoValue: function() {
+	        return 0;
+	    },
+	    autoform: {
+	        type: "hidden"
+	    }
 	}
 });
 
