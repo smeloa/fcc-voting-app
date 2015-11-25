@@ -44,7 +44,10 @@ body
 
 .login-buttons
 	a:hover
-		color lightyellow !important		
+		color lightyellow !important
+
+#login-username-label, #login-password-label
+	color yellow						
 
 /* Jumbotron */
 
@@ -161,6 +164,15 @@ body
 		color yellow
 		font-size 1em
 
+.login-link-text
+	text-decoration none !important
+
+.accounts-dialog
+	background-color darkgray
+
+.login-button
+	background yellow !important	
+
 
 /* SideNav Media Queries aka Responsive */
 
@@ -198,6 +210,35 @@ body
 		margin-bottom 10px	
 
 
+/* Mobile phone SideNav layout */
+
+@media (max-width: 450px) 
+	.sidebar-left 
+		padding 20px 0
+
+	.sidebar-left .sidebar-links 
+		text-align center
+		margin 20px auto 0
+
+	.sidebar-left .sidebar-links a 
+		display block
+		max-width 240px
+		width auto
+		vertical-align middle
+		text-align left
+		margin 0 auto 5px
+		padding 10px 25px
+		border-top none
+		border-left-width 2px
+		border-left-style solid
+
+	.sidebar-left .sidebar-links a i.fa 
+		display inline-block
+		font-size 20px
+		width 20px
+		margin 0 20px 0 0
+		vertical-align middle
+
 
 /*HASNT'T BEEN REVIEWED*/
 
@@ -221,40 +262,5 @@ body
 
 
 
-/* Mobile phone layout */
-
-@media (max-width: 450px) {
-
-	.sidebar-left {
-		padding: 20px 0;
-	}
-
-	.sidebar-left .sidebar-links {
-		text-align: center;
-		margin: 20px auto 0;
-	}
-
-	.sidebar-left .sidebar-links a {
-		display: block;
-		max-width: 240px;
-		width: auto;
-		vertical-align: middle;
-		text-align: left;
-		margin: 0 auto 5px;
-		padding: 10px 25px;
-		border-top: none;
-		border-left-width: 2px;
-		border-left-style: solid;
-	}
-
-	.sidebar-left .sidebar-links a i.fa {
-		display: inline-block;
-		font-size: 20px;
-		width: 20px;
-		margin: 0 20px 0 0;
-		vertical-align: middle;
-	}
-
-}
 
 

@@ -12,7 +12,7 @@ Polls.allow({
 PollOptions = new SimpleSchema ({
 	option: {
 		type: String,
-		label: "Name"
+		label: "Option"
 	},
 	votes: {
 		type: Number,
@@ -24,13 +24,9 @@ PollOptions = new SimpleSchema ({
 });
 
 PollSchema = new SimpleSchema({
-	name: {
+	question: {
 		type: String,
-		label: "Name"
-	},
-	description: {
-		type: String,
-		label: "Description"
+		label: "Question"
 	},
 	options: {
 		type: [PollOptions]
