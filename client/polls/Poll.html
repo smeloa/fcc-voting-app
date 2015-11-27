@@ -1,0 +1,10 @@
+<template name="Poll">
+	<article>
+		<h3>{{question}}</h3>
+		<p>
+			{{#each options}}
+				<span>{{option}} - {{votes}}</span>
+			{{/each}}
+		</p>
+	</article>
+</template>

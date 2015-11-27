@@ -12,7 +12,6 @@ Polls.allow({
 PollOptions = new SimpleSchema ({
 	option: {
 		type: String,
-		label: "Option"
 	},
 
 	votes: {
