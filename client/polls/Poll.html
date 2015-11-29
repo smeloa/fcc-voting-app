@@ -1,10 +1,10 @@
 <template name="Poll">
-	<article>
-		<h3>{{question}}</h3>
+    <div style="border: solid">
+    	<h3>{{question}}</h3>
 		<p>
 			{{#each options}}
-				<span>{{option}} - {{votes}}</span>
+				{{option}} - {{votes}}
 			{{/each}}
 		</p>
-	</article>
+    </div>
 </template>
