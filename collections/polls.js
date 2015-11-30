@@ -29,7 +29,7 @@ PollOptions = new SimpleSchema ({
 PollSchema = new SimpleSchema({
 	question: {
 		type: String,
-		label: "Question"
+		label: "QUESTION"
 	},
 	options: {
 		type: [PollOptions]

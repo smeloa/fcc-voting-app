@@ -1,10 +1,14 @@
 <template name="Poll">
-    <div class="poll-card" style="border: solid">
-    	<h3>{{question}}</h3>
-		<p>
-			{{#each options}}
-				{{option}} - {{votes}}
-			{{/each}}
-		</p>
+    <div class="poll-card text-center">
+        <div class="card-header text-center">
+            <h3>{{question}}</h3>
+        </div>
+        <ul class="list-group text-center">
+            {{#each options}}
+                <li>
+				    {{option}} - {{votes}}  
+				</li>
+            {{/each}} 
+        </ul>
     </div>
 </template>

@@ -1,0 +1,146 @@
+/* SideNav */
+
+.sidebar-left
+	position fixed
+	top 0
+	left 0
+	background-color black
+	width 120px
+	height 100%
+	padding 20px 0
+
+
+.sidebar-left .sidebar-links
+	margin 80px auto
+
+.sidebar-left .sidebar-links a 
+	display block
+	text-decoration none
+	margin 0 auto 5px auto
+	padding 20px 0
+	background-color #35393e
+	text-align center
+	color  #f0ad4e
+	font-size 1em
+	font-weight 700
+	border-left-width 2px
+	border-left-style solid
+	border-color #f0ad4e
+
+.sidebar-left .sidebar-links a i.fa
+	display block
+	font-size 1.8em
+	margin-bottom 5px
+
+
+.sidebar-left .sidebar-links a.selected
+	background-color #f9deb8
+	color #35393e
+	cursor default
+
+.link
+	color #f0ad4e
+
+.side-nav-logout
+	margin 0 20px
+	width 80px
+	background-color #35393e
+	border solid 1px #f0ad4e
+	a
+		color #f0ad4e
+		font-size 1em
+
+.login-link-text
+	text-decoration none !important
+
+.accounts-dialog
+	background-color #35393e
+
+.login-button
+	background #f0ad4e !important	
+
+/* SideNav Media Queries aka Responsive */
+
+@media (max-width: 900px) 
+	.main-content
+		max-width none
+		padding 40px 20px
+		margin 0 0 40px
+	
+
+	.sidebar-left
+		width auto
+		height auto
+		position inherit
+		padding 20px 0 0
+
+	.sidebar-left .sidebar-links
+		text-align center
+		margin  auto 0
+
+	.sidebar-left .sidebar-links a
+		display inline-block
+		width 100px
+		margin 0
+		padding 14px 0
+		border-left none
+		border-top-width: 2px
+		border-top-style solid
+	
+	.side-nav-logout
+		margin 0 auto
+
+	.login-responsive
+		margin-top 10px
+		margin-bottom 10px	
+
+
+/* Mobile phone SideNav layout */
+
+@media (max-width: 450px) 
+	.sidebar-left 
+		padding 20px 0
+
+	.sidebar-left .sidebar-links 
+		text-align center
+		margin 20px auto 0
+
+	.sidebar-left .sidebar-links a 
+		display block
+		max-width 240px
+		width auto
+		vertical-align middle
+		text-align left
+		margin 0 auto 5px
+		padding 10px 25px
+		border-top none
+		border-left-width 2px
+		border-left-style solid
+
+	.sidebar-left .sidebar-links a i.fa 
+		display inline-block
+		font-size 1.25em
+		width 20px
+		margin 0 20px 0 0
+		vertical-align middle 
+
+/* Create A Poll Styles */
+
+
+/*HASNT'T BEEN REVIEWED*/
+
+.sidebar-left a.company-logo {
+	display: block;
+	text-decoration: none;
+	width: 76px;
+	height: 76px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	color:  #ffffff;
+	font-size: 28px;
+	font-weight: normal;
+	line-height: 2.6;
+	border-radius: 50%;
+	background-color:  #181a1b;
+}
