@@ -1,0 +1,11 @@
+<template name="PollParticipate">
+	<div class="poll-card text-center">
+		<h3>{{question}}</h3>
+		<form>
+			{{#each options}}
+				<input type="radio" name="option" value={{option}}>{{option}}
+			{{/each}}
+			
+		</form>
+	</div>
+</template>
