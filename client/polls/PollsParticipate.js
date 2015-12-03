@@ -2,11 +2,11 @@ Template.PollParticipate.events({
     'click .vote': function(event) {
         
         event.preventDefault();
-        
-        var pollID = $(event.currentTarget).parent('.poll-card').data('id');
-        console.log(pollID);
-        var voteID = $(event.currentTarget).data('id');
-        console.log(voteID);
+
+        var target = $(event.target);
+
+        var pollID = $(this).parent('.poll-card').data('id');
+        var voteID = $(this).data('id');
         
         var voteString = 'options.' + voteID + '.votes';
         var action = {};
