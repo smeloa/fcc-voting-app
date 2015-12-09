@@ -1,20 +1,30 @@
 Template.PollParticipate.events({
-    'click .vote': function(event) {
+    'click .vote': function(event, template) {
         
         event.preventDefault();
 
-        var target = $(event.target);
+        var pollID = this._id;
+        console.log(pollID);
+        var voteID = template.$("input:checked").val();
+        console.log(voteID);
 
-        var pollID = $(this).parent('.poll-card').data('id');
-        var voteID = $(this).data('id');
-        
-        var voteString = 'options.' + voteID + '.votes';
-        var action = {};
-        action[voteString] = 1;
-        
-        Polls.update(
-            {_id: pollID},
-            {$inc: action}
-        );
+        Polls.update({
+            _id: pollID,
+            options: {
+                $elemMatch: {
+                    _id: voteID
+                }
+            }
+        }, {
+            $inc: {
+                'options.$.votes': 1
+            }
+        });
     }
 });
+
+Meteor.methods({
+    updateVote: function(event, template) {
+
+    }
+})

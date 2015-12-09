@@ -7,6 +7,6 @@ Template.DoPolls.onCreated(function() {
 
 Template.DoPolls.helpers({
 	polls: function() {
-		return Polls.find({});
+		return Polls.find({participatedIn: false});
 	}
 })

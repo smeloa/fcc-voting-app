@@ -12,6 +12,10 @@ Polls.allow({
 PollOptions = new SimpleSchema ({
 	option: {
 		type: String,
+		autoValue: function() {
+			if (this.isInsert)
+				return new Mongo.ObjectID()._str;
+		}
 	},
 
 	votes: {
@@ -38,7 +42,7 @@ PollSchema = new SimpleSchema({
 		type: String,
 		label: "tags"
 	},
-	particpatedIn: {
+	participatedIn: {
 		type: Boolean,
 		defaultValue: false,
 		optional: true,

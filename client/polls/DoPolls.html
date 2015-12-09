@@ -1,8 +1,6 @@
 <template name="DoPolls">
     <h1 class="section-header text-center">Participate in Polls</h1>
     {{#each polls}}
-        {{#if participatedIn="false"}}
             {{> PollParticipate}}
-        {{/if}}
     {{/each}}
 </template>
