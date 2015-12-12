@@ -4,20 +4,22 @@ Polls.allow({
 	insert: function(userId, doc) {
 		return !!userId;
 	},
-	update: function(userId, doc) {
-		return !!userId;
-	}
 });
 
 PollOptions = new SimpleSchema ({
-	option: {
+	_id: {
 		type: String,
 		autoValue: function() {
 			if (this.isInsert)
 				return new Mongo.ObjectID()._str;
-		}
+		},
+		autoform: {
+	        type: "hidden"
+	    }
 	},
-
+	option: {
+		type: String,
+	},
 	votes: {
 	    type: Number,
 	    min: 0,

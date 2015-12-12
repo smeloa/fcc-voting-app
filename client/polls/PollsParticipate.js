@@ -7,24 +7,11 @@ Template.PollParticipate.events({
         console.log(pollID);
         var voteID = template.$("input:checked").val();
         console.log(voteID);
+        console.log(this);
 
-        Polls.update({
-            _id: pollID,
-            options: {
-                $elemMatch: {
-                    _id: voteID
-                }
-            }
-        }, {
-            $inc: {
-                'options.$.votes': 1
-            }
+        Meteor.call('updateVotes', pollID, voteID, function(error, result) {
+            console.log(error, result);
         });
+
     }
 });
-
-Meteor.methods({
-    updateVote: function(event, template) {
-
-    }
-})
