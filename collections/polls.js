@@ -44,14 +44,14 @@ PollSchema = new SimpleSchema({
 		type: String,
 		label: "tags"
 	},
-	participatedIn: {
-		type: Boolean,
-		defaultValue: false,
-		optional: true,
-		autoform: {
-			type: "hidden"
-		}
-	},
+	// participatedIn: {
+	// 	type: Boolean,
+	// 	defaultValue: false,
+	// 	optional: true,
+	// 	autoform: {
+	// 		type: "hidden"
+	// 	}
+	// },
 	author: {
 		type: String,
 		label: "Author",

@@ -1,17 +1,17 @@
 Template.PollParticipate.events({
     'click .vote': function(event, template) {
-        
-        event.preventDefault();
 
+        event.preventDefault();
+        var userID = Meteor.user
         var pollID = this._id;
-        console.log(pollID);
         var voteID = template.$("input:checked").val();
-        console.log(voteID);
-        console.log(this);
 
         Meteor.call('updateVotes', pollID, voteID, function(error, result) {
             console.log(error, result);
         });
 
+        Meteor.call('registerVote', pollID, voteID, function(error, result) {
+            console.log(error, result);
+        });
     }
 });
