@@ -1,3 +1,6 @@
 <template name="PollsDone">
-	
+	<h1 class="section-header text-center">Polls you have done</h1>
+	{{#each polls}}
+        {{> Poll}}
+    {{/each}}
 </template>

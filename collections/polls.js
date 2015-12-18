@@ -44,14 +44,6 @@ PollSchema = new SimpleSchema({
 		type: String,
 		label: "tags"
 	},
-	// participatedIn: {
-	// 	type: Boolean,
-	// 	defaultValue: false,
-	// 	optional: true,
-	// 	autoform: {
-	// 		type: "hidden"
-	// 	}
-	// },
 	author: {
 		type: String,
 		label: "Author",
@@ -68,6 +60,14 @@ PollSchema = new SimpleSchema({
 		autoValue: function() {
 			return new Date()
 		},
+		autoform: {
+			type: "hidden"
+		}
+	},
+	voters: {
+		type: [String],
+		defaultValue: [],
+		minCount: 0,
 		autoform: {
 			type: "hidden"
 		}

@@ -7,6 +7,7 @@ Template.DoPolls.onCreated(function() {
 
 Template.DoPolls.helpers({
 	polls: function() {
-		return Polls.find({});
+		var user = Meteor.userId()
+		return Polls.find({voters: {$ne: user}});
 	}
-})
+});
